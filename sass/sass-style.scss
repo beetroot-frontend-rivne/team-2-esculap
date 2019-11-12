@@ -1,0 +1,50 @@
+$screen-lg: 992px;
+$screen-md: 768px;
+$screen-sm: 576px;
+
+
+
+// screen size
+@mixin laptop-screen {
+    @media screen and (max-width: $screen-lg) {
+        @content;
+    }
+}
+// screen size
+@mixin tablet-screen {
+    @media screen and (max-width: $screen-md) { 
+        @content;
+    }
+}
+// screen size
+@mixin mobile-screen {
+    @media screen and (max-width: $screen-sm) {
+        @content;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+//default width for content
+.wrapper {
+    max-width: 1200px;
+    padding: 0 15px;
+
+    @include laptop-screen() {
+        max-width: 760px;
+    }
+
+    @include tablet-screen() {
+        max-width: 560px;
+    }
+
+    @include mobile-screen() {
+        max-width: 480px; 
+    }
+}
+

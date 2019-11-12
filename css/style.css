@@ -1,0 +1,17 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+.wrapper {
+  max-width: 1200px;
+  padding: 0 15px; }
+  @media screen and (max-width: 992px) {
+    .wrapper {
+      max-width: 760px; } }
+  @media screen and (max-width: 768px) {
+    .wrapper {
+      max-width: 560px; } }
+  @media screen and (max-width: 576px) {
+    .wrapper {
+      max-width: 480px; } }
