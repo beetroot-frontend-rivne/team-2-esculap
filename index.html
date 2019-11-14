@@ -16,15 +16,18 @@
         <header class="header header_background_mod">
             <div class="wrapper">
                 <div class="header__inner">
-                    <!-- Navigation -->
-                    <div class="header__menu">
-                        <input id="hambuger" type="checkbox" class="checkbox" />
-                        <label for="hambuger">
-                            <svg class="menu-icon">
+                    <!-- NAVIGATION-->
+                    <nav class="header__nav">
+
+                        <!-- hamburger-icon -->
+                        <input id="toggle" class="checkbox" type="checkbox"/>
+                        <label for="toggle">
+                            <svg class="hamburger-icon">
                                 <use xlink:href="./icons/sprite.svg#menu-icon"></use>
                             </svg>
                         </label>
 
+                        <!-- menu -->
                         <ul class="menu">
                             <li class="menu__item">
                                 <a class="menu__link" href="#home">Home</a>
@@ -39,7 +42,22 @@
                                 <a class="menu__link" href="#contacts">Contacts</a>
                             </li>
                         </ul>
+                    </nav>
+
+                    <!-- header__main-block -->
+                    <div class="header__main-block">
+                        <div class=header__image></div>
+                        <h1 class="header__title">
+                            Free portfolio PSD template for graphic designers 
+                        </h1>
+                        <p class="header__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                            quis nostrud exercitation ullamco </p>
+                        <div class="header__button">
+                            <button class="btn btn_geometry">Hire me</button>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </header>
