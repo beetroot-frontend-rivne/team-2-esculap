@@ -44,6 +44,7 @@ $screen-sm: 576px;
 .wrapper {
     max-width: 1200px;
     padding: 0 15px;
+    margin: 0 auto;
 
     @include laptop-screen() {
         max-width: 760px;
@@ -55,6 +56,49 @@ $screen-sm: 576px;
 
     @include mobile-screen() {
         max-width: 480px; 
+    }
+}
+
+.header {
+
+    &__main-block {
+        max-width: 820px;
+        padding: 0 5px;
+    }
+
+    &__button {
+        max-width: 204px;
+    }
+
+    &_background_mod {
+        background-image: url("../images/header-img.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+
+}
+
+.menu {
+    display:flex;
+    
+    &__item {
+        list-style-type: none;
+    }
+}
+
+.hamburger-icon {
+    display: none;
+}
+
+.btn {
+    width:100%;
+     
+    &_geometry {
+        border-radius: 30px;
+        padding: 20px 10px;
     }
 }
 
