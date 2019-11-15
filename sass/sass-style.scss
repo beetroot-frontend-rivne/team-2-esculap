@@ -44,6 +44,7 @@ $screen-sm: 576px;
 .wrapper {
     max-width: 1200px;
     padding: 0 15px;
+    margin: 0 auto;
 
     @include laptop-screen() {
         max-width: 760px;
@@ -58,3 +59,122 @@ $screen-sm: 576px;
     }
 }
 
+// footer
+.footer_background_mod{
+    background-image: url("/images/footer-BG-image.png");
+}
+
+.footer__inner{
+    width: 100%;
+    height: 245px;
+    @include position-content-center;
+}
+
+.inner__text{
+    margin: 0 auto;
+    font-family: 'Lato';
+    font-weight: 200;
+    font-size: 50px;
+    color: white;
+    .text__font{
+        font-weight: 600;
+    }
+}
+
+.footer__button{
+    height: 55px;
+    width: 205px;
+    #button{
+        width: 100%;
+        height: 55px;
+        background-color: #fff;
+        border-radius: 30px;
+        border: none;
+        text-transform: uppercase;
+        font-family: 'Lato';
+        font-weight: 600;
+        font-size: 16px;
+        color: #3695ff;
+    }
+}
+
+.form-container__darckBackground{
+    display: none;
+    background-color:rgba(102, 102, 102, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.form__box{
+    width: 810px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    .close{
+        margin-left: 90%;
+        font-size: 40px;
+        color: #3687fe;
+    }
+
+    .content__title{
+        margin: 20px;
+        font-size: 50px;
+        color: #3677fd;
+    }
+
+    .form__item{
+        margin: 20px;
+        max-width: 500px;
+        width: 100%;
+        height: 50px;
+        padding: 0 10px;
+        border-radius: 20px;
+        border-color: #b7c0c9;
+        border-style: solid;
+        outline: none;
+        font-size: 16px;
+    }
+
+    .form__item-textarea{
+        margin: 20px;
+        max-width: 500px;
+        width: 100%;
+        padding: 10px 10px;
+        border-radius: 20px;
+        border-color: #b7c0c9;
+        outline: none;
+        resize: none;
+        font-size: 16px;
+        overflow: auto;
+    }
+
+    .item__button{
+        margin: 20px;
+        max-width: 200px;
+        width: 100%;
+        height: 50px;
+        background-color: #3675fd;
+        outline: none;
+        color: white;
+        border: none;
+        border-radius: 50px;
+        font-size: 16px;
+    }
+}
+
+.close:hover{
+    cursor: pointer;
+}

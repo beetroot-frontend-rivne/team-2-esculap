@@ -66,7 +66,40 @@
         <footer class="footer footer_background_mod">
             <div class="wrapper">
                 <div class="footer__inner">
-                    <p>FOOTER description</p>
+                    <p class="inner__text">Need a graphic designer?
+                        <span class="text__font">Ready to work!</span>
+                    </p>
+                    <div class="footer__form-container">
+                        <div id="mypopup" class="form-container__darckBackground">
+                            <div class="form__box">
+                                <form action="" class="form__content">
+                                    <span class="close">&times;</span>
+                                    <h3 class="content__title">Hire Me!</h3>
+                                    <input type="text" class="form__item" placeholder="Your Name">
+                                    <input type="text" class="form__item" placeholder="Your E-mail">
+                                    <textarea name="" class="form__item-textarea" id="" placeholder="Your Message"
+                                        cols="30" rows="10"></textarea>
+                                    <input type="submit" class="item__button" value="Send Message">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="footer__button">
+                            <input type="button" id="button" value="Hair Me!">
+                        </div>
+                        <script type="text/JavaScript">
+                            let popup = document.getElementById("mypopup"),
+                                popupToggle = document.getElementById("button"),
+                                popupClose = document.querySelector(".close");
+
+                            popupToggle.onclick = function () {
+                                popup.style.display = "block";
+                            };
+
+                            popupClose.onclick = function () {
+                                popup.style.display = "none";
+                            };
+                        </script>
+                    </div>
                 </div>
             </div>
         </footer>
