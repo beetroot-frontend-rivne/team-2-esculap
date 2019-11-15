@@ -60,52 +60,55 @@ $screen-sm: 576px;
 }
 
 // footer
-.footer_background_mod{
+.footer_background_mod {
     background-image: url("/images/footer-BG-image.png");
     background-repeat: no-repeat;
 }
-
-.footer__inner{
-    width: 100%;
-    height: 245px;
-    @include position-content-center;
-}
-
-.footer__text{
-    margin: 0 auto;
-    font-family: 'Lato';
-    font-weight: 200;
-    font-size: 50px;
-    color: white;
-
-    .text__font{
-        font-weight: 600;
-    }
-}
-
-.footer__button{
-    height: 55px;
-    width: 205px;
-
-    .button{
+.footer {
+    &__inner {
         width: 100%;
-        height: 55px;
-        background-color: #fff;
-        border-radius: 30px;
-        border: none;
-        text-transform: uppercase;
-        font-family: 'Lato';
-        font-weight: 600;
-        font-size: 16px;
-        color: #3695ff;
+        height: 245px;
+        @include position-content-center;
     }
+    
+    &__text {
+    
+        margin: 0 auto;
+        font-family: 'Lato';
+        font-weight: 200;
+        font-size: 50px;
+        color: white;
+    
+        .text-font{
+            font-weight: 600;
+        }
+    }
+
+    &__button {
+        height: 55px;
+        width: 205px;
+    
+        .button {
+            width: 100%;
+            height: 55px;
+            background-color: #fff;
+            border-radius: 30px;
+            border: none;
+            text-transform: uppercase;
+            font-family: 'Lato';
+            font-weight: 600;
+            font-size: 16px;
+            color: #3695ff;
+        }
+    }
+
+    .footer__form-container {
+        padding: 10px;
+    }
+
 }
 
-.footer__form-container{
-    padding: 10px;
-}
-
-.modal-bg{
+.modal-bg {
     width: 100%;
     height: 100%;
     background-color:rgba(102, 102, 102, 0.5);
@@ -117,22 +120,26 @@ $screen-sm: 576px;
     display: none;
 }
 
-.modal{
+.modal {
     width: 810px;
     background-color: #fff;
     border-radius: 10px;
     padding: 10px;
     margin: 20px auto;
 
-    .modal__close{
+    &__close{
         float: right;
         margin-right: 20px;
         font-size: 40px;
         color: #3687fe;
     }
+    
+    &__close:hover {
+        cursor: pointer;
+    }
 }
 
-.form{
+.form {
     margin: 0 auto;
     max-width: 500px;
     display: flex;
@@ -140,13 +147,13 @@ $screen-sm: 576px;
     justify-content: space-between;
     align-items: center;
 
-    .form__title{
+    &__title {
         margin: 10px;
         font-size: 50px;
         color: #3677fd;
     }
 
-    .form__item{
+    &__item {
         margin: 10px;
         width: 100%;
         height: 50px;
@@ -158,7 +165,7 @@ $screen-sm: 576px;
         font-size: 16px;
     }
 
-    .form__item-textarea{
+    &__item-textarea {
         margin: 10px;
         max-width: 500px;
         width: 100%;
@@ -171,7 +178,7 @@ $screen-sm: 576px;
         overflow: auto;
     }
 
-    .form__button{
+    &__button {
         margin: 10px;
         max-width: 200px;
         width: 100%;
@@ -183,8 +190,4 @@ $screen-sm: 576px;
         border-radius: 50px;
         font-size: 16px;
     }
-}
-
-.modal__close:hover{
-    cursor: pointer;
 }
