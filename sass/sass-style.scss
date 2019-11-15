@@ -44,6 +44,7 @@ $screen-sm: 576px;
 .wrapper {
     max-width: 1200px;
     padding: 0 15px;
+    margin: 0 auto;
 
     @include laptop-screen() {
         max-width: 760px;
@@ -57,4 +58,243 @@ $screen-sm: 576px;
         max-width: 480px; 
     }
 }
+
+
+// HEADER
+.header {
+
+    &__inner {
+        position: relative;
+        @include position-content-center;
+        flex-direction: column;
+        font-size: 15px;
+        text-align: center;
+        color: #ffffff;
+        text-transform: uppercase;
+        height: 100vh;
+        padding: 40px 0;
+    }
+
+    //  NAVIGATION
+    &__nav {
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+
+    // header main-block
+    &__main-block {
+        flex: 1;
+        max-width: 820px;
+        padding: 5px 5px 0 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    &__image-block {
+        display: block;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: #ffffff;
+        margin: 0 auto 10px;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: 900;
+        margin-bottom: 20px;
+
+        @include laptop-screen() {
+            font-size: 40px;
+        }
+
+        @include tablet-screen() {
+            font-size: 30px;
+        }
+
+        @include mobile-screen() {
+            font-size: 20px;
+        }
+    }
+
+    &__description {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 35px;
+
+        @include tablet-screen() {
+            font-size: 14px;
+            line-height: 25px;
+        }
+
+        @include mobile-screen() {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+    
+    // Modifier HEADER (background)
+    &--background_mod {
+        background-image: url("../images/header-img.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+    }
+
+    // header button block
+    &__button-block {
+        width: 100%;
+        max-width: 204px;
+        margin: 0 auto;
+    }
+}
+
+
+// photo in header__image-block 
+.photo {
+    width: 100%;
+    border-radius: 50%;
+}
+
+
+//NAVIGATION, Humburger-icon
+.nav-toggler {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    
+    // ACTION
+    &:hover {
+        background-color: #3695ff;
+    }
+    
+    @include tablet-screen() {
+        display: flex;
+    }
+}
+
+.hamburger-icon {
+    fill: #ffffff;
+}
+
+
+// CHECKBOX and :checked in Navigation
+.checkbox {
+    position: absolute;
+    top: -999999px;
+    left: -999999px;
+    visibility: hidden;
+    opacity: 0;
+    
+    &:checked ~ .menu {
+        position:absolute;
+        top: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #3680fe;
+        max-width: 150px;
+        
+        @include mobile-screen() {
+            max-width: 100%;
+        }
+    }
+    
+    &:checked ~ .nav-toggler {
+        background-color: #3695ff;
+    }
+}
+
+
+// MENU
+.menu {
+    display:flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 100%;
+    max-width: 400px;
+    
+    @include tablet-screen() {
+        display: none;
+    }
+    
+    // MENU ITEM
+    &__item {
+        padding: 10px 5px;
+        width: 1 / 4 * 100%;
+        border-top: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+        
+        @include tablet-screen() {
+            width: 100%;
+        }
+        
+        // ACTION
+        &:hover {
+            border-color: #71beeb;
+            border-color: #71beeb;
+        }
+    }
+    
+    // MENU link
+    &__link {
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+
+// BUTTON
+.btn {
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 16px;
+    cursor: pointer;
+    
+    &--size {
+        font-weight: 700;
+        border-radius: 30px;
+        padding: 20px 10px;
+        color: #3695ff;
+        background-color: #ffffff;
+        border: none;
+        
+        @include tablet-screen() {
+            padding: 15px 10px;
+        }
+        
+        @include mobile-screen() {
+            padding: 10px;
+        }
+    }
+    
+    // ACTION
+    &:hover {
+        box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3);
+    }
+}
+
+// SCROLL ICON
+.scroll-icon {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding-bottom: 10px;
+
+    @include mobile-screen() {
+        display: none;
+    }
+}
+
+
 
