@@ -22,16 +22,16 @@
 
 .header__inner {
   position: relative;
-  padding: 40px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh;
+  font-size: 15px;
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  font-size: 15px; }
+  height: 100vh;
+  padding: 40px 0; }
 
 .header__nav {
   position: relative;
@@ -53,7 +53,7 @@
   height: 150px;
   border-radius: 50%;
   background-color: #ffffff;
-  margin: 0 auto 10px auto; }
+  margin: 0 auto 10px; }
 
 .header__title {
   font-size: 50px;
@@ -82,14 +82,14 @@
       font-size: 12px;
       line-height: 20px; } }
 
-.header_background_mod {
+.header--background_mod {
   background-image: url("../images/header-img.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh; }
 
-.header__button {
+.header__button-block {
   width: 100%;
   max-width: 204px;
   margin: 0 auto; }
@@ -165,7 +165,7 @@
   text-transform: uppercase;
   font-size: 16px;
   cursor: pointer; }
-  .btn_size {
+  .btn--size {
     font-weight: 700;
     border-radius: 30px;
     padding: 20px 10px;
@@ -173,11 +173,11 @@
     background-color: #ffffff;
     border: none; }
     @media screen and (max-width: 768px) {
-      .btn_size {
+      .btn--size {
         padding: 15px 10px; } }
     @media screen and (max-width: 576px) {
-      .btn_size {
-        padding: 10px 10px; } }
+      .btn--size {
+        padding: 10px; } }
   .btn:hover {
     box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3); }
 
