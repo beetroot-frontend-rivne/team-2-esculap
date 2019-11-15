@@ -61,9 +61,10 @@ $screen-sm: 576px;
 
 
 // HEADER
-
 .header {
+
     &__inner {
+        position: relative;
         padding: 40px 0;
         @include position-content-center;
         flex-direction: column;
@@ -74,6 +75,7 @@ $screen-sm: 576px;
         font-size: 15px;
     }
 
+    //  NAVIGATION
     &__nav {
         position: relative;
         display: flex;
@@ -81,6 +83,7 @@ $screen-sm: 576px;
         width: 100%;
     }
 
+    // header main-block
     &__main-block {
         flex: 1;
         max-width: 820px;
@@ -90,7 +93,7 @@ $screen-sm: 576px;
         justify-content: space-around;
     }
 
-    &__image {
+    &__image-block {
         display: block;
         width: 150px;
         height: 150px;
@@ -132,13 +135,8 @@ $screen-sm: 576px;
             line-height: 20px;
         }
     }
-
-    &__button {
-        width: 100%;
-        max-width: 204px;
-        margin: 0 auto;
-    }
-
+    
+    // Modifier HEADER (background)
     &_background_mod {
         background-image: url("../images/header-img.jpg");
         background-size: cover;
@@ -147,14 +145,23 @@ $screen-sm: 576px;
         height: 100vh;
     }
 
-
+    // header button block
+    &__button {
+        width: 100%;
+        max-width: 204px;
+        margin: 0 auto;
+    }
 }
 
+
+// photo in header__image-block 
 .photo {
     width: 100%;
     border-radius: 50%;
 }
 
+
+//NAVIGATION, Humburger-icon
 .nav-toggler {
     display: none;
     justify-content: center;
@@ -164,25 +171,30 @@ $screen-sm: 576px;
     height: 42px;
     cursor: pointer;
     transition: all 0.2s ease-out;
-
+    
+    // ACTION
     &:hover {
         background-color: #3695ff;
     }
     
-
     @include tablet-screen() {
         display: flex;
     }
 }
 
+.hamburger-icon {
+    fill: #ffffff;
+}
 
+
+// CHECKBOX and :checked in Navigation
 .checkbox {
     position: absolute;
     top: -999999px;
     left: -999999px;
     visibility: hidden;
     opacity: 0;
-
+    
     &:checked ~ .menu {
         position:absolute;
         top: 100%;
@@ -196,44 +208,44 @@ $screen-sm: 576px;
             max-width: 100%;
         }
     }
-
+    
     &:checked ~ .nav-toggler {
         background-color: #3695ff;
     }
 }
 
-.hamburger-icon {
-    fill: #ffffff;
-}
 
-
+// MENU
 .menu {
     display:flex;
     flex-wrap: wrap;
     list-style-type: none;
     width: 100%;
     max-width: 400px;
-
+    
     @include tablet-screen() {
         display: none;
     }
     
+    // MENU ITEM
     &__item {
         padding: 10px 5px;
         width: 1 / 4 * 100%;
         border-top: 1px solid transparent;
         border-bottom: 1px solid transparent;
-
+        
         @include tablet-screen() {
             width: 100%;
         }
-
+        
+        // ACTION
         &:hover {
             border-color: #71beeb;
             border-color: #71beeb;
         }
     }
-
+    
+    // MENU link
     &__link {
         text-decoration: none;
         color: #ffffff;
@@ -241,12 +253,13 @@ $screen-sm: 576px;
 }
 
 
+// BUTTON
 .btn {
     width:100%;
     text-transform: uppercase;
     font-size: 16px;
     cursor: pointer;
-     
+    
     &_size {
         font-weight: 700;
         border-radius: 30px;
@@ -254,18 +267,33 @@ $screen-sm: 576px;
         color: #3695ff;
         background-color: #ffffff;
         border: none;
-
+        
         @include tablet-screen() {
             padding: 15px 10px;
         }
-
+        
         @include mobile-screen() {
             padding: 10px 10px;
         }
     }
-
+    
+    // ACTION
     &:hover {
         box-shadow: 2px 3px 20px rgba(0, 0, 0, 0.3);
     }
 }
+
+// SCROLL ICON
+.scroll-icon {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding-bottom: 10px;
+
+    @include mobile-screen() {
+        display: none;
+    }
+}
+
 
