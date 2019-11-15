@@ -97,7 +97,7 @@
                         <div id="mypopup" class="form-container__darckBackground">
                             <div class="form__box">
                                 <form action="" class="form__content">
-                                    <span class="close">&times;</span>
+                                    <span id="close" class="close">&times;</span>
                                     <h3 class="content__title">Hire Me!</h3>
                                     <input type="text" class="form__item" placeholder="Your Name">
                                     <input type="text" class="form__item" placeholder="Your E-mail">
@@ -113,7 +113,7 @@
                         <script type="text/JavaScript">
                             let popup = document.getElementById("mypopup"),
                                 popupToggle = document.getElementById("button"),
-                                popupClose = document.querySelector(".close");
+                                popupClose = document.getElementById("close");
 
                             popupToggle.onclick = function () {
                                 popup.style.display = "block";
