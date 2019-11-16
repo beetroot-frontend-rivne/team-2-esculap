@@ -35,24 +35,26 @@
 .main__section {
   background-color: white;
 }
-.main__section .main__inner__header {
+
+.main__background--mod {
+  background-color: #f1f8ff;
+}
+
+.main__header {
+  padding-top: 90px;
+  margin-bottom: 70px;
   font-size: 50px;
   font-weight: lighter;
   text-align: center;
   color: #3695ff;
-  padding-top: 90px;
-  margin-bottom: 70px;
 }
-.main__section .main__inner__text {
+
+.main__text {
+  margin-bottom: 110px;
   font-size: 16px;
   line-height: 35px;
   text-align: center;
   color: #5a5a5a;
-  margin-bottom: 110px;
-}
-
-.main_background--mod {
-  background-color: #f1f8ff;
 }
 
 .list {
@@ -65,7 +67,7 @@
   list-style: none;
   width: 33.3333333333%;
 }
-.list .item .item__wrapper {
+.list .item__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,30 +75,30 @@
   margin: 20px 15px;
   margin-bottom: 40px;
 }
-.list .item .item__wrapper .item__icon {
+.list .item__icon {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
   width: 140px;
   height: 140px;
   border-radius: 70px;
   border: 1.5px solid #c0c8d1;
-  margin-top: 50px;
-  margin-bottom: 30px;
 }
-.list .item .item__wrapper .item__header {
+.list .item__header {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 30px;
   height: 50px;
-  color: #3677fd;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 30px;
+  color: #3677fd;
 }
-.list .item .item__wrapper .item__text {
+.list .item__text {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -105,7 +107,6 @@
   text-align: center;
   color: #5a5a5a;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .list .item__img {
   width: 100%;
@@ -121,27 +122,27 @@
     width: 100%;
   }
 }
-.list--size {
+.list--big {
   padding-bottom: 100px;
 }
-.list--size .item__logo {
+.list--big .item__logo {
   list-style: none;
   width: 25%;
 }
-.list--size .item__logo .item__wrapper__logo {
+.list--big .item__logo .wrapper__logo {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 10px;
 }
-.list--size .item__logo .item__img {
+.list--big .item__logo .logo__img {
   width: 100%;
 }
 
 @media only screen and (max-width: 576px) {
-  .list--size .item__logo {
-    width: 50%;
+  .list--big .item__logo {
     margin-bottom: 20px;
+    width: 50%;
   }
 }
 
