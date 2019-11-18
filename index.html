@@ -13,18 +13,23 @@
 <body>
     <div class="page">
         <!-- HEADER -->
-        <header class="header header_background_mod">
+        <header class="header header--background_mod">
             <div class="wrapper">
                 <div class="header__inner">
-                    <!-- Navigation -->
-                    <div class="header__menu">
-                        <input id="hambuger" type="checkbox" class="checkbox" />
-                        <label for="hambuger">
-                            <svg class="menu-icon">
-                                <use xlink:href="./icons/sprite.svg#menu-icon"></use>
+
+                    <!-- NAVIGATION-->
+                    <nav class="header__nav">
+
+                        <!-- hamburger-icon and checkbox -->
+                        <input id="menu-toggle-input" class="checkbox" type="checkbox" />
+                        <label for="menu-toggle-input" class="nav-toggler">
+                            <svg class="hamburger-icon" xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+                                viewBox="0 0 24 24">
+                                <path d="M4 15h16v-2H4v2zm0 4h16v-2H4v2zm0-8h16V9H4v2zm0-6v2h16V5H4z" />
                             </svg>
                         </label>
 
+                        <!-- menu -->
                         <ul class="menu">
                             <li class="menu__item">
                                 <a class="menu__link" href="#home">Home</a>
@@ -39,10 +44,41 @@
                                 <a class="menu__link" href="#contacts">Contacts</a>
                             </li>
                         </ul>
+                    </nav>
+
+                    <!-- header__main-block -->
+                    <div class="header__main-block">
+                        <div class="header__image-block">
+                            <img class="photo" src="./images/img-01.jpg" alt="photo user">
+                        </div>
+
+                        <div class="header__text-block">
+                            <h1 class="header__title">
+                                Free portfolio PSD template for graphic designers
+                            </h1>
+                            <p class="header__description">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                veniam,
+                                quis nostrud exercitation ullamco </p>
+                        </div>
+
+                        <div class="header__button-block">
+                            <button class="btn btn--size">Hire me</button>
+                        </div>
                     </div>
+
+                    <!-- scroll-icon -->
+                    <svg class="scroll-icon" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="32" viewBox="0 0 19 32">
+                        <image id="Inteligentny_obiekt_wektorowy" data-name="Inteligentny obiekt wektorowy" width="19"
+                            height="32"
+                            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAgCAQAAABat4tEAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfjCw4VNBx+zUuNAAAA60lEQVQ4y+3RIU9CURQH8J8P98YGiYZubI4xNwOBSYIgJL+D0S9pAl6C4KBixMYYAQpsTJ5FB1zAZOTcdP/3F+45Ryo4ufQ1LYVpJKysjGwYHrOTdWEX9i/s2osP73+aR/eRuZriH6ioZh5JrLXEZ1CsZS2JrCTyGmdYQ15iFWFirKJ8ApVVjE1+O+1basoFKKdpqb8byEZX7ClgLbGuzf7cpkZuVfdQ1Y2RaTjeoZm6ws+toG5meLyFrY5UWwaRtlTH9tSyFgYKHnCnYGCxe7pKD7/9rAQ+ve3H4eoTa6wlh3HIVnq+9KwO42+4rElVBKAL7AAAAABJRU5ErkJggg==" />
+                    </svg>
+
                 </div>
             </div>
         </header>
+        <!-- /HEADER -->
 
         <!-- MAIN -->
         <main class="main">
@@ -270,12 +306,53 @@
         <footer class="footer footer_background_mod">
             <div class="wrapper">
                 <div class="footer__inner">
-                    <p>FOOTER description</p>
+                    <p class="footer__text">Need a graphic designer?
+                        <b>Ready to work!</b>
+                    </p>
+                    <div class="footer__form-container">
+
+                        <div id="mypopup" class="modal-bg">
+                            <div class="modal">
+                                <span id="close" class="modal__close">&times;</span>
+                                <div class="modal__content">
+
+                                    <form action="" class="form">
+                                        <h3 class="form__title">Hire Me!</h3>
+                                        <input type="text" class="form__item" placeholder="Your Name">
+                                        <input type="text" class="form__item" placeholder="Your E-mail">
+                                        <textarea name="" class="form__item-textarea" id="#" placeholder="Your Message"
+                                            cols="30" rows="10"></textarea>
+                                        <input type="submit" class="form__button" value="Send Message">
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__button">
+                            <input type="button" id="button" class="button" value="Hair Me!">
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </footer>
 
     </div>
+
+    <script type="text/JavaScript">
+        let popup = document.getElementById("mypopup"),
+            popupToggle = document.getElementById("button"),
+            popupClose = document.getElementById("close");
+
+        popupToggle.onclick = function () {
+            popup.style.display = "block";
+        };
+
+        popupClose.onclick = function () {
+            popup.style.display = "none";
+        };
+    </script>
+
 </body>
 
 </html>
