@@ -80,6 +80,39 @@ $screen-sm: 576px;
         color: white;
     }
 
+    @include laptop-screen() {
+
+        .footer__text {
+            font-size: 50px;
+        }
+    }
+
+    @include tablet-screen() {
+
+        .footer__inner{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .footer__text {
+            font-size: 30px;
+        }
+    }
+
+    @include mobile-screen(){
+
+        .footer__inner{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer__text {
+            font-size: 25px;
+        }
+
+    }
+
     &__button {
         height: 55px;
         min-width: 205px;
